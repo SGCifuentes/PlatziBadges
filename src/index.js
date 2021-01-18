@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
+import "./global.css";
+import BadgeNew from "./pages/BadgeNew";
 
-import Badge from './components/Badge';
+const container = document.getElementById("app");
 
-const container = document.getElementById('app');
-
-ReactDOM.render(<Badge />, container);
+// ReactDOM.render(__que__, __donde__);
+ReactDOM.render(<BadgeNew />, container);
