@@ -8,13 +8,20 @@ import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 
 class BadgeNew extends React.Component {
-  state = { form: {} };
+  state = { form: {
+    firstName: '',
+    lastName: '',
+    email: '',
+    jobTitle: '',
+    twitter: '',
+  } };
 
   handleChange = (e) => {
     this.setState({
       form: {
-        [e.target.name]: e.target.value,
-      },
+        ...this.state.form,
+        [e.target.name]: e.target.value
+      }
     });
   };
 
@@ -30,15 +37,16 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName="Sebastian"
-                lastName="Gonzalez"
-                jobTitle="Frontend Developer"
-                avatarUrl="https://media-exp1.licdn.com/dms/image/C4E03AQGSwkRIuQkyvg/profile-displayphoto-shrink_200_200/0/1606506361834?e=1616630400&v=beta&t=WA70fHT0jDt4b16rY0tpPgAZFjRFq_gZZa84UdKR_kU"
-                twitter="SGCifuentes"
+                firstName={this.state.form.firstName}
+                lastName={this.state.form.lastName}
+                jobTitle={this.state.form.jobTitle}
+                avatarUrl="https://static.platzi.com/media/avatars/avatars/sebastiangonzalez19_c40420cd-0d41-4910-8654-c7beeb4ea680.jpeg"
+                twitter={this.state.form.twitter}
+                email={this.state.form.email}
               />
             </div>
             <div className="col-6">
-              <BadgeForm onChange={this.handleChange} />
+              <BadgeForm onChange={this.handleChange} formValues={this.state.form}/>
             </div>
           </div>
         </div>
