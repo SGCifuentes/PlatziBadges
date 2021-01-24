@@ -1,8 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class BadgeForm extends React.Component {
-  state = {
-  };
+  state = {};
 
   handleClick = (e) => {
     console.log("Button was click");
@@ -14,7 +14,7 @@ class BadgeForm extends React.Component {
   };
   render() {
     return (
-      <div>
+      <React.Fragment>
         <h1>New Attendant</h1>
 
         <form onSubmit={this.handleSubmit}>
@@ -71,10 +71,10 @@ class BadgeForm extends React.Component {
           </div>
 
           <button onClick={this.handleClick} className="btn btn-primary">
-            Save
+            submit
           </button>
         </form>
-      </div>
+      </React.Fragment>
     );
   }
 }
