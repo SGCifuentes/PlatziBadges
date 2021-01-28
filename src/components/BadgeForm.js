@@ -3,20 +3,12 @@ import React from "react";
 class BadgeForm extends React.Component {
   state = {};
 
-  handleClick = (e) => {
-    console.log("Button was click");
-  };
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form was submit");
-    console.log(this.state);
-  };
   render() {
     return (
       <React.Fragment>
         <h1>New Attendant</h1>
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
@@ -72,6 +64,9 @@ class BadgeForm extends React.Component {
           <button onClick={this.handleClick} className="btn btn-primary">
             submit
           </button>
+          {this.props.error && (
+            <p className="text-danger">{this.props.error.message}</p>
+          )}
         </form>
       </React.Fragment>
     );

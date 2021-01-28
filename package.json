@@ -2,7 +2,7 @@
   "name": "platzi-badges",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://sgcifuentes.github.io/PlatziBadges",
+  "homepage": "https://sgcifuentes.github.io/PlatziBadges",
   "scripts": {
     "start": "npm-run-all -p client server",
     "client": "react-scripts start",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "md5": "^2.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
@@ -42,4 +43,3 @@
     "not op_mini all"
   ]
 }
-
