@@ -7,7 +7,8 @@ import "./styles/BadgesList.css";
 
 class BadgesList extends React.Component {
   render() {
-    const badgeList = [...this.props.badges].reverse();
+    const badgeList = [...this.props.badges];
+
     if (badgeList.length === 0) {
       return (
         <div>
