@@ -1,12 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import './styles/Badges.css';
-import confLogo from '../images/badge-header.svg';
-import BadgesList from '../components/BadgesList';
-import PageLoading from '../components/PageLoading';
-import PageError from '../components/PageError';
-import api from '../api';
+import "./styles/Badges.css";
+import confLogo from "../images/badge-header.svg";
+import BadgesList from "../components/BadgesList";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
+import MiniLoader from "../components/MiniLoader";
+import api from "../api";
 
 class Badges extends React.Component {
   state = {
@@ -17,6 +18,12 @@ class Badges extends React.Component {
 
   componentDidMount() {
     this.fetchData();
+
+    this.intervalId = setInterval(this.fetchData, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
   }
 
   fetchData = async () => {
@@ -31,7 +38,7 @@ class Badges extends React.Component {
   };
 
   render() {
-    if (this.state.loading === true) {
+    if (this.state.loading === true && !this.state.data) {
       return <PageLoading />;
     }
 
@@ -61,6 +68,8 @@ class Badges extends React.Component {
           </div>
 
           <BadgesList badges={this.state.data} />
+
+          {this.state.loading && <MiniLoader />}
         </div>
       </React.Fragment>
     );
