@@ -1,15 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import BadgeDetails from './BadgeDetails';
-import PageLoading from '../components/PageLoading';
-import PageError from '../components/PageError';
-import api from '../api';
+import BadgeDetails from "./BadgeDetails";
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
+import api from "../api";
 
 class BadgeDetailsContainer extends React.Component {
   state = {
     loading: true,
     error: null,
     data: undefined,
+    modalIsOpen: false,
   };
 
   componentDidMount() {
@@ -27,6 +28,14 @@ class BadgeDetailsContainer extends React.Component {
     }
   };
 
+  handleOpenModal = (e) => {
+    this.setState({ modalIsOpen: true });
+  };
+
+  handleCloseModal = (e) => {
+    this.setState({ modalIsOpen: false });
+  };
+
   render() {
     if (this.state.loading) {
       return <PageLoading />;
@@ -36,7 +45,14 @@ class BadgeDetailsContainer extends React.Component {
       return <PageError error={this.state.error} />;
     }
 
-    return <BadgeDetails badge={this.state.data} />;
+    return (
+      <BadgeDetails
+        onCloseModal={this.handleCloseModal}
+        onOpenModal={this.handleOpenModal}
+        modalIsOpen={this.state.modalIsOpen}
+        badge={this.state.data}
+      />
+    );
   }
 }
 
