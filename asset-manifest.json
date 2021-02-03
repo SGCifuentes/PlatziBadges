@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/PlatziBadges/static/css/main.ca2a1551.chunk.css",
-    "main.js": "/PlatziBadges/static/js/main.745aa097.chunk.js",
-    "main.js.map": "/PlatziBadges/static/js/main.745aa097.chunk.js.map",
+    "main.css": "/PlatziBadges/static/css/main.e445202a.chunk.css",
+    "main.js": "/PlatziBadges/static/js/main.aa0c7a42.chunk.js",
+    "main.js.map": "/PlatziBadges/static/js/main.aa0c7a42.chunk.js.map",
     "runtime-main.js": "/PlatziBadges/static/js/runtime-main.f4dbe1bb.js",
     "runtime-main.js.map": "/PlatziBadges/static/js/runtime-main.f4dbe1bb.js.map",
     "static/css/2.f5543f5b.chunk.css": "/PlatziBadges/static/css/2.f5543f5b.chunk.css",
-    "static/js/2.c1fd6c19.chunk.js": "/PlatziBadges/static/js/2.c1fd6c19.chunk.js",
-    "static/js/2.c1fd6c19.chunk.js.map": "/PlatziBadges/static/js/2.c1fd6c19.chunk.js.map",
+    "static/js/2.27090cd9.chunk.js": "/PlatziBadges/static/js/2.27090cd9.chunk.js",
+    "static/js/2.27090cd9.chunk.js.map": "/PlatziBadges/static/js/2.27090cd9.chunk.js.map",
     "index.html": "/PlatziBadges/index.html",
     "static/css/2.f5543f5b.chunk.css.map": "/PlatziBadges/static/css/2.f5543f5b.chunk.css.map",
-    "static/css/main.ca2a1551.chunk.css.map": "/PlatziBadges/static/css/main.ca2a1551.chunk.css.map",
-    "static/js/2.c1fd6c19.chunk.js.LICENSE.txt": "/PlatziBadges/static/js/2.c1fd6c19.chunk.js.LICENSE.txt",
+    "static/css/main.e445202a.chunk.css.map": "/PlatziBadges/static/css/main.e445202a.chunk.css.map",
+    "static/js/2.27090cd9.chunk.js.LICENSE.txt": "/PlatziBadges/static/js/2.27090cd9.chunk.js.LICENSE.txt",
     "static/media/astronauts.ea532e99.svg": "/PlatziBadges/static/media/astronauts.ea532e99.svg",
     "static/media/badge-header.2c3af956.svg": "/PlatziBadges/static/media/badge-header.2c3af956.svg",
     "static/media/logo.235d00e1.svg": "/PlatziBadges/static/media/logo.235d00e1.svg",
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.f4dbe1bb.js",
     "static/css/2.f5543f5b.chunk.css",
-    "static/js/2.c1fd6c19.chunk.js",
-    "static/css/main.ca2a1551.chunk.css",
-    "static/js/main.745aa097.chunk.js"
+    "static/js/2.27090cd9.chunk.js",
+    "static/css/main.e445202a.chunk.css",
+    "static/js/main.aa0c7a42.chunk.js"
   ]
 }
